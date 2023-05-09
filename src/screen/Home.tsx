@@ -1,22 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
-      <Text><Icon name='home' size={50}/></Text>
+      <Button title='Add employee' color='rgb(142,143,142)'/>
     </View>
   )
 }
+
 
 export default Home
 
 const styles = StyleSheet.create({
   container :{
-    flex:1,
-    alignItems:'center',
-    justifyContent:'center'   
+    width:200,
+    margin:30,
+    color:'black'   
   }
 
 })

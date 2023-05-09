@@ -6,8 +6,10 @@ import {
     TouchableOpacity,} from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { useNavigation } from '@react-navigation/native'
 
 const Signup = () => {
+  const navigation = useNavigation()
   return (
     <View style = {styles.container}>
       <Text style={styles.text}>Let's get started!</Text>
@@ -21,7 +23,7 @@ const Signup = () => {
         <Text style={styles.buttonText}>SIGNUP</Text>
       </TouchableOpacity>
       <TouchableOpacity  onPress={() => {
-        // Button press handler
+        navigation.goBack();
       }}>
         <Text style={styles.arrow}><Icon name='arrow-back-sharp' color='black' size={25} /></Text>
       </TouchableOpacity>

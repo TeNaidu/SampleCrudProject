@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer} from '@react-navigation/native';
+import SafeAreaView from 'react-native-safe-area-view';
+import AuthNavigator from './src/navigation/AuthNavigator';
 
 export default function App() {
+  // isAuthenticated = is...
   return (
-    <View style={styles.container}>
-      <Text>O</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
+      <AuthNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
