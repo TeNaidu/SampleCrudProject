@@ -16,12 +16,13 @@ function AuthNavigator() {
         name='Login'
         component={Login}
         options={() => ({
+          headerShown: false
           // headerBackTitle: 'Back',
-          headerBackTitleVisible: false,
-          headerStyle: {
+          // headerBackTitleVisible: false,
+          // headerStyle: {
            
-          },
-          title: '',
+          // },
+          // title: '',
         })}
       />
       <Stack.Screen
