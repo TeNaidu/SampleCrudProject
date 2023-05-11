@@ -5,7 +5,6 @@ import Setting from '../screen/Setting'
 import Home from '../screen/Home'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-
 const Tab = createBottomTabNavigator()
 const HomeComponet = () => {
   return (

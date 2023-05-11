@@ -3,7 +3,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screen/Login'
 import Signup from '../screen/Signup';
 import HomeComponet from './HomeComponet';
-
+import AddEmployee from '../screen/AddEmployee'
+import EditDetails from '../screen/EditDetails'
+import Home from '../screen/Home'
 
 const Stack = createNativeStackNavigator();
 // Navigator, Screen, Group
@@ -20,7 +22,6 @@ function AuthNavigator() {
           // headerBackTitle: 'Back',
           // headerBackTitleVisible: false,
           // headerStyle: {
-           
           // },
           // title: '',
         })}
@@ -31,8 +32,23 @@ function AuthNavigator() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name='Home'
+        name='AddEmployee'
+        component={AddEmployee}
+        options={{headerShown: false}}
+      />
+<Stack.Screen
+        name='EditDetails'
+        component={EditDetails}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name='HomeComponet'
         component={HomeComponet}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name='Home'
+        component={Home}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

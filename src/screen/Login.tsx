@@ -71,10 +71,6 @@ if (responseJson["code"] == 0) {
     console.error(error);
   });
   };
-
-  
-
-
   return (
     <View style = {styles.container}>
       <Text style={styles.text}>WelCome</Text>

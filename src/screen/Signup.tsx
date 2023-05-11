@@ -18,7 +18,6 @@ const Signup = ({navigation}:any) => {
 // const [name, setText] = useState('');
 // const [email, setemail] = useState('');
 
-
 const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [password, setUserpassword] = useState('');
@@ -97,8 +96,6 @@ if (responseJson["code"] == 0) {
       </View>
     );
   }
-
-
  return (
    <View style = {styles.container}>
      <Text style={styles.text}>Let's get started!</Text>

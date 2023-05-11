@@ -2,10 +2,10 @@ import { StyleSheet, Text,TouchableOpacity} from 'react-native'
 import React from 'react'
 import { View } from 'react-native'
 
-const Setting = () => {
+const Setting = ({navigation}:any) => {
   return (
     <View style={styles.container}>
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
       <Text style={styles.buttonText}>Logout</Text>
     </TouchableOpacity>
     </View>

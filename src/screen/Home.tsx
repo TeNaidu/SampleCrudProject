@@ -6,8 +6,7 @@ import EditDetails from './EditDetails'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Dialog, { DialogFooter, DialogButton, DialogContent } from 'react-native-popup-dialog';
 
-const Home = () => {
-  const navigation = useNavigation()
+const Home = ({navigation}:any) => {
   const [Data,setData]=useState([])
   const [ShowPop,setShowPop] = useState('false')
   const callApiData = async()=>{
@@ -41,7 +40,9 @@ const Home = () => {
   return (
     <View style={styles.container}>
     <View style={styles.button}>
-    <Button title='Add employee' color='rgb(142,143,142)'/>
+    <Button title='Add employee' color='rgb(142,143,142)' onPress={() => {
+      navigation.navigate('AddEmployee')
+   }}/>
     </View>
     <Text style ={styles.heading}>Employee Lists</Text>
     <ScrollView >
@@ -61,15 +62,12 @@ const Home = () => {
         <View style = {styles.buttonCon}>
           <View></View>
     <TouchableOpacity style={styles.EditButton} onPress={() => {
-        //navigation.navigate('EditDetails')
+        navigation.navigate('EditDetails')
       }}>
         <Text style ={styles.text} >EDIT</Text>
       </TouchableOpacity>
       
       <TouchableOpacity  style={styles.DeleteButton}  onPress={() => {
-
-        setShowPop('true')
-
 //handleDelete(item.id)
 }}>
       <Text style ={styles.text} >DELETE</Text>
